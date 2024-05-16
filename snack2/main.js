@@ -43,8 +43,23 @@ function randomNumber(min, max) {//FUNZIONE PER GENERARE UN NUMERO INTERO RANDOM
     return Math.floor(Math.random() * (max - min) ) + min;
   }
 
-
+const teamsFouls= []//ARRAY VUOTO DOVE PUSHO IL NOME DELLE SQUADRE E I FALLI SUBITI
 
 teams.forEach(element => element.score= randomNumber(0,50));//ASSEGNO UN VALORE RANDOMICO TRA 0 E 50 ALLA PROPRIETA SCORE
 teams.forEach(element => element.fouls= randomNumber(0,20));//ASSEGNO UN VALORE RANDOMICO TRA 0 E 20 ALLA PROPRIETA FOULS
+
+
+teams.forEach(element => {
+    teamsFouls.push(//PUSHO IL NOME E I FALLI NEL NUOVO ARRAY
+        {
+           name: element.name,
+           fouls:element.fouls,
+        }
+    )
+
+
+})
 console.log(teams)
+
+console.log(teamsFouls)
+teamsFouls.forEach(element=> console.log(`La squadra ${element.name} ha subito ${element.fouls} falli`))//STAMPO IN CONSOLE LA SQUADRA È I FALLI CHE HA SUBITO
