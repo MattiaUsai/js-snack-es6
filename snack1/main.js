@@ -1,9 +1,9 @@
 'use strict';
-
+//CREO UN ARRAY DI OGGETTI OGNI OGGETTO HA UN NOME E UN PESO
 const bicycles = [
     {
-        nome: 'bicicletta da corsa',
-        peso: 10,
+        nome: 'bicicletta da corsa',//NOME DELL'OGGETTO
+        peso: 10,//PESO DELL'OGGETTO
     },
     {
         nome: 'Mountain bike',
@@ -23,7 +23,20 @@ const bicycles = [
     }
     
 ];
-const bicyclesWeigh = []
+
+
+const bicyclesWeigh =[];
+
 console.log(bicycles)
 
 bicycles.forEach(element=> bicyclesWeigh.push(element.peso))
+
+
+
+
+
+
+
+function arrayMin(arr) {
+    return Math.min.apply(null, arr);
+  }
